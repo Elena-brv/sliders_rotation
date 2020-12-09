@@ -2,6 +2,98 @@
 @import "fonts";
 @import "typography";
 
+:root {
+  --swiper-navigation-size: 30px;
+}
+
 body {
-  background: $c-gray;
+  background: linear-gradient(to top, #8f949b 0%,#616970 36%,#28343b 100%);
+}
+
+.wrapper {
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+h1 {
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.swiper {
+  position: relative;
+
+  &-container {
+    max-width: 900px;
+    margin-bottom: 35px;
+    padding-bottom: 36px;
+  }
+
+  &-slide {
+    width: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-button-prev,
+  &-button-next {
+    top: calc(50% - 18px);
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+  }
+
+  &-button-prev {
+
+    @media (max-width: 1060px) {
+      left: -25px;
+    }
+  }
+
+  &-button-next {
+
+    @media (max-width: 1060px) {
+      right: -25px;
+    }
+  }
+
+  &-button-prev:focus,
+  &-button-next:focus {
+    outline: none;
+  }
+
+  &-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+  }
+
+  &-pagination-fraction {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    bottom: 0;
+  }
+}
+
+.swiper-2 {
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.swiper-3 {
+
+  img {
+    border-radius: 20px 0;
+  }
 }
