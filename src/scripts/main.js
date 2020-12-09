@@ -73,7 +73,7 @@ const sliderThird = new Swiper('.slider-3', {
     prevEl: '.swiper-3-button-prev',
   },
 
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 40,
   effect: 'coverflow',
 
@@ -81,6 +81,16 @@ const sliderThird = new Swiper('.slider-3', {
     rotate: 110,
     slideShadows: false,
     depth: 30,
+  },
+
+  breakpoints: {
+    360: {
+      slidesPerView: 2,
+    },
+
+    667: {
+      slidesPerView: 3,
+    },
   },
 });
 
